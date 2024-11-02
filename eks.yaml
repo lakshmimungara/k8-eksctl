@@ -1,12 +1,11 @@
-apiVersion: eksctl.io/v1alpha5
-kind: ClusterConfig
+apiVersion: eksctl.io/v1alpha5            # Specifies the API version for eksctl configuration (v1alpha5)
+kind: ClusterConfig                        # Defines the resource type as ClusterConfig
+metadata:                                  # Metadata information about the cluster configuration
+  name: expense-1                          # Sets the name of the cluster to "expense-1"
+  region: us-east-1                        # Specifies the AWS region where the cluster will be created (us-east-1)
 
-metadata:
-  name: expense-1
-  region: us-east-1
-
-managedNodeGroups:
-  - name: expense
-    instanceType: m5.large
-    desiredCapacity: 3
-    spot: true 
+managedNodeGroups:                         # Defines the configuration for managed node groups in the cluster
+  - name: expense                          # Sets the name of the managed node group to "expense"
+    instanceType: m5.large                 # Specifies the EC2 instance type to use for the nodes (m5.large)
+    desiredCapacity: 3                      # Defines the desired number of nodes in the node group (3)
+    spot: true                              # Enables the use of Spot Instances for the node group, potentially reducing costs
