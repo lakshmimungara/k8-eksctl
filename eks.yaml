@@ -1,7 +1,7 @@
 apiVersion: eksctl.io/v1alpha5            # Specifies the API version for eksctl configuration (v1alpha5)
 kind: ClusterConfig                        # Defines the resource type as ClusterConfig
 metadata:                                  # Metadata information about the cluster configuration
-  name: expense-1                          # Sets the name of the cluster to "expense-1"
+  name: expense                            # Sets the name of the cluster to "expense-1"
   region: us-east-1                        # Specifies the AWS region where the cluster will be created (us-east-1)
 
 managedNodeGroups:                         # Defines the configuration for managed node groups in the cluster
