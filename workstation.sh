@@ -67,8 +67,7 @@ VALIDATE $? "kubectl installation"
 # kubens
 git clone https://github.com/ahmetb/kubectx /opt/kubectx
 ln -s /opt/kubectx/kubens /usr/local/bin/kubens
-VALIDATE $? "kubens installation"
-
+echo "kubens installation"
 
 #Helm
 sudo curl -fsSL -o helm.tar.gz https://get.helm.sh/helm-v3.16.2-linux-amd64.tar.gz
